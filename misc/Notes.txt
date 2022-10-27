@@ -1,0 +1,76 @@
+en vez de comprobar currentweapon y shooting, que shooting sea un int
+
+
+                if (ani_upperBody.timer < .1F)      ani_upperBody.frame = 3;
+                else if (ani_upperBody.timer < .2F) ani_upperBody.frame = 2;
+                else if (ani_upperBody.timer < .3F) ani_upperBody.frame = 1;
+                else if (ani_upperBody.timer < .4F) ani_upperBody.frame = 0;
+                else if (ani_upperBody.timer < .5F) ani_upperBody.frame = 1;
+                else if (ani_upperBody.timer < .6F)
+                {
+                    ani_upperBody.frame = 2;
+                    PlaySound(snd_grenade);
+                }
+                else if (ani_upperBody.timer < .64F) 
+                {
+                    ani_upperBody.frame = 3;
+
+                    if (!grenade)
+                    {
+                        grenade = true;
+                        InitialWorldX = worldX;
+                        grenadeTimer1 = grenadeTimer2 = 0.F;
+                        grenadeX = shoulderX + 22;
+                        grenadeY = shoulderY - 6;
+                        grenadeSpeedX = adjacent_side + 50 ;
+                        grenadeSpeedY = opposite_side * -2.5 - 50;
+                    }
+                }
+                else if (ani_upperBody.timer < .9F) ani_upperBody.frame = 4;
+
+                else 
+                {
+                    throwing = false;
+                    EquipWeapon();
+                }
+
+
+Deleted redundant boolean variables check regarding the upperBody status of the player (!melee && !throwing) substituted with a single check on upperBodyIdle
+
+All animations dependant on upper body state go inside the same if(){} branch
+
+# g++ is the compiler for cpp
+# .. for going to the upper directory
+# -o = output
+# -O2 = optimization flags | https://gcc.gnu.org/onlinedocs/gcc/Optimize-Options.html
+# -Wall = All warning messages are allowed to be output |https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html
+# -I = Include directory
+# -L = static library
+# -mwindows = Disable The Debugging Console That Spawns In The Background | https://gcc.gnu.org/onlinedocs/gcc/x86-Windows-Options.html
+# -Wl,--subsystem,windows (lo mismo)
+# main.exe = run the game
+
+Deleted redundant code when player changes body direction through mouse movement.
+
+Instead of if(){...}else{} → Only one Condition:
+
+if (adjacent_side < 0 && ani_upperBody.direction == 1 || adjacent_side > 0 && ani_upperBody.direction == -1)
+{
+   ani_upperBody.direction = (ani_lowerBody.direction *= -1);
+   horizontal_align();
+   PlaySound(snd_stepGrass);
+}
+
+- Reduced ammount of calls to function horizontal_align(): 
+No horizontal alignment is neccessary if we update BOTH:
+
+ani_upperBody.x 
+and 
+ani_lowerBody.x 
+
+When the player is walking around
+
+# default:
+# 	@echo "Building"
+# 	$(CXX) ../src/main.cpp ../src/audio.cpp ../src/anim.cpp ../rsc/icon.res -o "../build/$(TARGET)" -O2 -Wall -I ../include/ -L ../lib/ -lraylib -lopengl32 -lgdi32 -lwinmm -mwindows
+
