@@ -4,6 +4,13 @@
 DISCLAIMER: I do NOT own any of the assets, all of them belong to their amazing creators.\
 I did some minor edits to modify some of the sprites to add weapons, poses, and movements.
 
+## Screenshots
+
+![Screenshot](screenshots/9.75.png)
+![Screenshot](screenshots/14.87.png)
+![Screenshot](screenshots/6.85.png)
+![Screenshot](screenshots/51.04.png)
+
 ## Textures form [Sprite Database](https://spritedatabase.net)
 
 * [Halo Zero Sprites by Dobermann Chainsaw, AlextheBlind, 58 and Atomik](https://spritedatabase.net/game/769)
@@ -23,3 +30,5 @@ I did some minor edits to modify some of the sprites to add weapons, poses, and 
 * [```snd_enterCar```](https://freesound.org/people/alvinpianous/sounds/491408/)
 * [```snd_gear```](https://freesound.org/people/Samulis/sounds/209403/)
 * [```snd_noAmmo```](https://freesound.org/people/michorvath/sounds/427603/)
+...
+(To Do: Complete list)
