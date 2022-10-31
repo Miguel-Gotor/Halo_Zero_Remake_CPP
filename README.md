@@ -28,7 +28,16 @@ I did some minor edits to modify some of the sprites to add weapons, poses, and 
 * [```snd_damage```](https://freesound.org/people/Dirtjm/sounds/262279/)
 * [```snd_grenade```](https://freesound.org/people/EFlexMusic/sounds/387229/)
 * [```snd_enterCar```](https://freesound.org/people/alvinpianous/sounds/491408/)
-* [```snd_gear```](https://freesound.org/people/Samulis/sounds/209403/)
+* [```snd_gear```](https://freesound.org/people/nebyoolae/sounds/318067/)
 * [```snd_noAmmo```](https://freesound.org/people/michorvath/sounds/427603/)
+* [```snd_melee```](https://freesound.org/people/unfa/sounds/221540/)
+* [```snd_jump1```](https://freesound.org/people/EpicSoundEffects/sounds/475892/)
+* [```snd_jump2```](https://freesound.org/people/morganpurkis/sounds/381570/)
+* [```snd_leaveCar```](https://freesound.org/people/jarhead123/sounds/557398/)
+* [```snd_stepGrass```](https://freesound.org/people/JuanD20/sounds/392512/)
+* [```snd_stepGravel1```](https://freesound.org/people/Ali_6868/sounds/384883/)
+* [```snd_stepGravel2```](https://freesound.org/people/Ali_6868/sounds/384877/)
+* [```snd_handgun```](https://freesound.org/people/michorvath/sounds/427592/)
+
 ...
 (To Do: Complete list)
